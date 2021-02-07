@@ -268,13 +268,6 @@ UPDATE Buildings  -- VP: Arsenal, Metallurgy
 SET BuildingClass = 'BUILDINGCLASS_EE_BASTION', PrereqTech = 'TECH_EE_FLINTLOCK', Defense = 1000, ExtraCityHitPoints = 100, CityIndirectFire = 0, BlockScienceTheft = 0
 WHERE Type = 'BUILDING_KREPOST'; 
 
--- Infixo: in VP2/27 Ostrog doesn't have any prereq buildings, don't know yet if it's a bug or not; delete/insert will work in both cases
-/*
-DELETE FROM Building_ClassesNeededInCity WHERE BuildingType = 'BUILDING_KREPOST';
-INSERT INTO Building_ClassesNeededInCity (BuildingType, BuildingClassType)
-VALUES ('BUILDING_KREPOST', 'BUILDINGCLASS_CASTLE');
-*/
-
 ----------------------------------------------
 -- Tavern
 ----------------------------------------------
@@ -293,12 +286,9 @@ INSERT INTO Building_ResourceYieldChanges (BuildingType, ResourceType, YieldType
 ----------------------------------------------
 
 UPDATE Buildings
-SET CitySupplyFlat = 2
+SET CitySupplyFlat = 1
 WHERE Type = 'BUILDING_EE_GUNSMITH';
 
-
-
---DELETE FROM Building_UnitCombatProductionModifiers WHERE BuildingType = 'BUILDING_EE_GUNSMITH';
 INSERT INTO Building_UnitCombatProductionModifiers (BuildingType, UnitCombatType, Modifier) VALUES 
 ('BUILDING_EE_GUNSMITH', 'UNITCOMBAT_ARMOR', 25),
 ('BUILDING_EE_GUNSMITH', 'UNITCOMBAT_GUN', 25),

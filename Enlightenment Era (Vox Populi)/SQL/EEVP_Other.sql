@@ -4,7 +4,10 @@
 -- 2018-02-01 Reworked by Infixo from EE & VP-EE mods
 ----------------------------------------------------
 
-
+----------------------------------------------------
+-- CUSTOM MOD OPTIONS
+----------------------------------------------------
+UPDATE CustomModOptions SET Value = 1 WHERE Name = 'CORE_AREA_EFFECT_PROMOTIONS';
 
 ----------------------------------------------------
 -- WORLD CONGRESS
